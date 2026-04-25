@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +8,14 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
+  <div id="scroll-progress"></div>
 
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <span class="logo">ZB</span>
+      <a href="#" class="logo">ZB</a>
       <ul id="nav-menu">
         <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#faehigkeiten">Fähigkeiten</a></li>
@@ -21,9 +24,12 @@
         <li><a href="#ausbildung">Ausbildung</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -33,16 +39,34 @@
       <p class="subtitle">Willkommen in meinem Portfolio</p>
       <h1>Zoran Blažević</h1>
       <h2>Softwaretester (manuell)</h2>
-      <p class="hero-desc">Fokussiert auf manuelles Testen von Web- und Salesforce-Anwendungen. Erfahren in Scrum, Jira und ISTQB-zertifiziert.</p>
+      <p class="hero-desc">Fokussiert auf manuelles Testen von Web- und Salesforce-Anwendungen. Erfahren in Scrum, Jira
+        und ISTQB-zertifiziert.</p>
       <div class="hero-btns">
         <a href="#kontakt" class="btn-primary">Kontakt aufnehmen</a>
         <a href="#erfahrung" class="btn-secondary">Erfahrung ansehen</a>
+      </div>
+
+      <div class="quality-seal">
+        <svg viewBox="0 0 200 200" width="145" height="145" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="seal-path" d="M 100,100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0"/>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+          <circle cx="100" cy="100" r="84" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="3.5 2.5" opacity="0.45"/>
+          <text x="100" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="36" fill="#2563eb">QA</text>
+          <rect x="65" y="103" width="70" height="1.5" fill="#2563eb" opacity="0.3" rx="1"/>
+          <text x="100" y="118" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="10" fill="#2563eb" letter-spacing="4">CERTIFIED</text>
+          <text x="100" y="132" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#2563eb" opacity="0.6">★  ★  ★</text>
+          <text font-family="Inter, sans-serif" font-size="9" fill="#2563eb" font-weight="500" letter-spacing="2.8">
+            <textPath href="#seal-path">· QUALITY ASSURED · SOFTWARE TESTER</textPath>
+          </text>
+        </svg>
       </div>
     </div>
     <div class="hero-badge">
       <div class="badge-circle">
         <span class="badge-num">2+</span>
-        <span class="badge-label">Jahre<br/>Erfahrung</span>
+        <span class="badge-label">Jahre<br />Erfahrung</span>
       </div>
     </div>
   </section>
@@ -216,12 +240,39 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">08/1997 — 03/2005</span>
-            <h4>Frühere Positionen — Schweiz</h4>
-            <p class="company">Antalis AG · Pneu Egger · Garage Marti AG</p>
+            <span class="timeline-date">05/2000 — 01/2002</span>
+            <h4>Allrounder Logistik </h4>
+            <p class="company">Antalis AG, Lupfig, Schweiz</p>
             <ul>
-              <li>Allrounder Logistik (Wareneingang/-ausgang)</li>
+              <li>Wareneingang und Warenausgang</li>
+              <li>Allgemeine Logistikaufgaben</li>
+              <li>Retouren und Kundereklaamationen</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">03/2000 — 04/2000</span>
+            <h4>Automechaniker</h4>
+            <p class="company">Pneu Egger, Olten, Schweiz</p>
+            <ul>
               <li>Wartungs- und Reparaturarbeiten an Fahrzeugen</li>
+              <li>Pneuservice</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">08/1997 — 02/2000</span>
+            <h4>Automechaniker</h4>
+            <p class="company">Garage Marti AG, Niedergösgen, Schweiz</p>
+            <ul>
+              <li>Garage Marti AG, Niedergösgen, Schweiz</li>
+              <li>Lenkgeometrie-Prüfungen</li>
             </ul>
           </div>
         </div>
@@ -239,7 +290,8 @@
 
         <div class="project-card">
           <h4>TDV — Testdatenverwaltung</h4>
-          <p>Testdatenmanagement-System. Erstellung und Pflege von Testdaten für verschiedene Testumgebungen. Funktionale Tests der Datenverwaltungs-Module.</p>
+          <p>Testdatenmanagement-System. Erstellung und Pflege von Testdaten für verschiedene Testumgebungen.
+            Funktionale Tests der Datenverwaltungs-Module.</p>
           <div class="project-tools">
             <span>Jira</span><span>Audi Webcenter</span><span>MBB</span><span>ODP</span>
           </div>
@@ -247,7 +299,8 @@
 
         <div class="project-card">
           <h4>RegIndex — Audi Webapplikation</h4>
-          <p>Tests nach User Stories, Prüfung von Eingabevalidierungen und Geschäftsregeln. Regressionstests nach Releases.</p>
+          <p>Tests nach User Stories, Prüfung von Eingabevalidierungen und Geschäftsregeln. Regressionstests nach
+            Releases.</p>
           <div class="project-tools">
             <span>Jira</span>
           </div>
@@ -255,7 +308,8 @@
 
         <div class="project-card">
           <h4>CVB — Classical Vehicle Business</h4>
-          <p>Salesforce-Applikation. Testen von Workflows, Objekten und Benutzerberechtigungen. Testfälle erstellen und pflegen, Regressionstests nach Releases.</p>
+          <p>Salesforce-Applikation. Testen von Workflows, Objekten und Benutzerberechtigungen. Testfälle erstellen und
+            pflegen, Regressionstests nach Releases.</p>
           <div class="project-tools">
             <span>Salesforce</span><span>Jira</span>
           </div>
@@ -303,36 +357,53 @@
   </section>
 
   <!-- KONTAKT -->
-  <section id="kontakt" class="section">
+  <section id="kontakt" class="section section-dark">
     <div class="container">
-      <h3 class="section-title">Kontakt</h3>
-      <p class="kontakt-sub">Schreib mir gerne — ich bin offen für neue Möglichkeiten.</p>
-      <div class="contact-cards">
+      <div class="kontakt-grid">
 
-        <a href="mailto:zoran.blazevic@gmail.com" class="contact-card">
-          <span class="contact-icon">✉️</span>
-          <span class="contact-label">E-Mail</span>
-          <span class="contact-value">zoran.blazevic@gmail.com</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/zoranblazevic/" target="_blank" class="contact-card">
-          <span class="contact-icon">💼</span>
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/zoranblazevic</span>
-        </a>
-
-        <div class="contact-card">
-          <span class="contact-icon">📍</span>
-          <span class="contact-label">Standort</span>
-          <span class="contact-value">Šabac, Serbien</span>
+        <div class="kontakt-left">
+          <h3 class="section-title">Kontakt</h3>
+          <p class="kontakt-sub">Offen für neue Möglichkeiten —<br>schreib mir gerne.</p>
+          <a href="mailto:zoran.blazevic@gmail.com" class="btn-primary kontakt-cta">
+            ✉ E-Mail schreiben
+          </a>
         </div>
 
-        <div class="contact-card">
-          <span class="contact-icon">📞</span>
-          <span class="contact-label">Telefon</span>
-          <span class="contact-value">+381 69 578 45 54</span>
-        </div>
+        <div class="kontakt-right">
 
+          <a href="mailto:zoran.blazevic@gmail.com" class="kontakt-item">
+            <div class="kontakt-item-icon">✉️</div>
+            <div class="kontakt-item-body">
+              <span class="kontakt-item-label">E-Mail</span>
+              <span class="kontakt-item-value">zoran.blazevic@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/zoranblazevic/" target="_blank" class="kontakt-item">
+            <div class="kontakt-item-icon">💼</div>
+            <div class="kontakt-item-body">
+              <span class="kontakt-item-label">LinkedIn</span>
+              <span class="kontakt-item-value">linkedin.com/in/zoranblazevic</span>
+            </div>
+          </a>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon">📍</div>
+            <div class="kontakt-item-body">
+              <span class="kontakt-item-label">Standort</span>
+              <span class="kontakt-item-value">Šabac, Serbien</span>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon">📞</div>
+            <div class="kontakt-item-body">
+              <span class="kontakt-item-label">Telefon</span>
+              <span class="kontakt-item-value">+381 69 578 45 54</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -344,4 +415,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
