@@ -159,6 +159,21 @@ nav ul a:hover {
   max-width: 600px;
 }
 
+.hero-photo-wrapper {
+  flex-shrink: 0;
+  order: -1;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 270px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  border: 3px solid rgba(37, 99, 235, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
 .subtitle {
   color: var(--primary);
   font-size: 0.9rem;
@@ -589,6 +604,11 @@ footer {
 
   .hero h1 { font-size: 2.5rem; }
   .hero-btns { justify-content: center; }
+
+  .hero-photo {
+    width: 160px;
+    height: 200px;
+  }
 
   .about-grid {
     grid-template-columns: 1fr;
